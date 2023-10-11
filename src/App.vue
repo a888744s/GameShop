@@ -8,11 +8,13 @@
 <script setup>
 import { onMounted } from 'vue'
 import navbar_product from './components/navbar_product.vue';
-
+import AddToCart from './views/AddToCart.vue';
 import { useProductStore } from './store/product';
 const product_store = useProductStore()
 
 onMounted(() => product_store.fetch_products())
+
+
 </script> 
 
 <style lang="scss" scoped>
@@ -23,4 +25,5 @@ onMounted(() => product_store.fetch_products())
     align-items: center;
     flex-wrap: wrap; /* เพิ่มบรรทัดนี้เพื่อให้รายการของคุณขึ้นบรรทัดใหม่เมื่อความกว้างไม่พอ */
   }
+
 </style>

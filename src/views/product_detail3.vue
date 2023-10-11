@@ -5,8 +5,8 @@
           <img src="https://i.ytimg.com/vi/FuSrDOJyBuw/maxresdefault.jpg" alt="Valorant" class="img-fluid">
         </div>
         <div class="col-md-6">
-          <h1 class="display-4">Valorant</h1>
-          <p class="lead">VALORANT: เกมยิงปืนในรูปแบบ 5v5 ที่ขับเคลื่อนโดยเหล่าเอเจนท์ผู้มากฝีมือและเป็นเกม FPS ที่เน้นการยิงที่แม่นยำพร้อมกับใช้ความสามารถอันเป็นเอกลักษณ์ของตัวละคร</p>
+          <h1 class="display-4">Tales runner</h1>
+          <p class="lead">tales runner เกมวิ่งบน PC เกมวิ่งอันดับ1ให้บริการโดยบริษัท Rhaon Entertainment ของเกาหลีใต้</p>
           <h4 class="mt-4">เลือกราคา</h4>
           <select class="form-select">
             <option value="50">50 บาท</option>

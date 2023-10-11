@@ -5,8 +5,8 @@
           <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1696513856" alt="Valorant" class="img-fluid">
         </div>
         <div class="col-md-6">
-          <h1 class="display-4">Valorant</h1>
-          <p class="lead">VALORANT: เกมยิงปืนในรูปแบบ 5v5 ที่ขับเคลื่อนโดยเหล่าเอเจนท์ผู้มากฝีมือและเป็นเกม FPS ที่เน้นการยิงที่แม่นยำพร้อมกับใช้ความสามารถอันเป็นเอกลักษณ์ของตัวละคร</p>
+          <h1 class="display-4">Counter-Strike2</h1>
+          <p class="lead">Counter-Strike คือซีรีส์วิดีโอเกมยิงมุมมองบุคคลที่หนึ่งที่มีผู้เล่นหลายคนทางยุทธวิธี ซึ่งทีมผู้ก่อการร้ายต่อสู้กันเพื่อก่อเหตุก่อการร้าย ในขณะที่ผู้ต่อต้านผู้ก่อการร้ายพยายามป้องกัน</p>
           <h4 class="mt-4">เลือกราคา</h4>
           <select class="form-select">
             <option value="50">50 บาท</option>

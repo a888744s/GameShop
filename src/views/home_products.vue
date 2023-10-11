@@ -1,10 +1,11 @@
 <template>
+  <div class="bghome">
     <div>
       <div class="row">
         <div class="col-4">
           <!-- เนื้อหาของคอลัมน์ที่ 1 -->
-          <div class="card" style="width: 24rem;">
-            <img src="https://sls-prod.api-onscene.com/partner_files/trueidintrend/187654/valorant-open-beta%20(1).png" class="card-img-top mx-auto" alt="" style="width: 23.9rem; height: 14rem">
+          <div class="card" style="width: 26rem;">
+            <img src="https://sls-prod.api-onscene.com/partner_files/trueidintrend/187654/valorant-open-beta%20(1).png" class="card-img-top mx-auto" alt="" style="width: 25.9rem; height: 14rem">
             <div class="card-body">
               <h5 class="card-title">Valorant</h5>
               <p class="card-text">เติมเกม</p>
@@ -17,10 +18,10 @@
   
         <div class="col-4">
           <!-- เนื้อหาของคอลัมน์ที่ 2 -->
-          <div class="card" style="width: 24rem;">
-            <img src="https://cdn.oneesports.co.th/cdn-data/sites/3/2021/08/ROV.png" class="card-img-top mx-auto" alt="" style="width: 23.9rem; height: 14rem">
+          <div class="card" style="width: 26rem;">
+            <img src="https://cdn.oneesports.co.th/cdn-data/sites/3/2021/08/ROV.png" class="card-img-top mx-auto" alt="" style="width: 25.9rem; height: 14rem">
             <div class="card-body">
-              <h5 class="card-title">Valorant</h5>
+              <h5 class="card-title">ROV</h5>
               <p class="card-text">เติมเกม</p>
               <p class="card-text">ราคา</p>
               <router-link to="/product_detail2" class="btn btn-primary mx-2">รายละเอียด</router-Link>
@@ -31,10 +32,10 @@
   
         <div class="col-4">
           <!-- เนื้อหาของคอลัมน์ที่ 3 -->
-          <div class="card" style="width: 24rem;">
-            <img src="https://i.ytimg.com/vi/FuSrDOJyBuw/maxresdefault.jpg" class="card-img-top mx-auto" alt="" style="width: 23.9rem; height: 14rem">
+          <div class="card" style="width: 26rem;">
+            <img src="https://i.ytimg.com/vi/FuSrDOJyBuw/maxresdefault.jpg" class="card-img-top mx-auto" alt="" style="width: 25.9rem; height: 14rem">
             <div class="card-body">
-              <h5 class="card-title">Valorant</h5>
+              <h5 class="card-title">Tales Runner</h5>
               <p class="card-text">เติมเกม</p>
               <p class="card-text">ราคา</p>
               <router-link to="/product_detail3" class="btn btn-primary mx-2">รายละเอียด</router-Link>
@@ -49,10 +50,10 @@
         <div class="row">
           <div class="col-4">
             <!-- เนื้อหาของคอลัมน์ที่ 1 -->
-            <div class="card" style="width: 24rem;">
-              <img src="https://wstatic-prod.pubg.com/web/live/static/og/img-og-pubg.jpg" class="card-img-top mx-auto" alt="" style="width: 23.9rem; height: 14rem">
+            <div class="card" style="width: 26rem;">
+              <img src="https://wstatic-prod.pubg.com/web/live/static/og/img-og-pubg.jpg" class="card-img-top mx-auto" alt="" style="width: 25.9rem; height: 14rem">
               <div class="card-body">
-                <h5 class="card-title">Valorant</h5>
+                <h5 class="card-title">PUBG</h5>
                 <p class="card-text">เติมเกม</p>
                 <p class="card-text">ราคา</p>
                 <router-link to="/product_detail4" class="btn btn-primary mx-2">รายละเอียด</router-Link>
@@ -63,10 +64,10 @@
     
           <div class="col-4">
             <!-- เนื้อหาของคอลัมน์ที่ 2 -->
-            <div class="card" style="width: 24rem;">
-              <img src="https://cdn-webth.garenanow.com/webth/cdn/fo4/reskin/share.jpg" class="card-img-top mx-auto" alt="" style="width: 23.9rem; height: 14rem">
+            <div class="card" style="width: 26rem;">
+              <img src="https://cdn-webth.garenanow.com/webth/cdn/fo4/reskin/share.jpg" class="card-img-top mx-auto" alt="" style="width: 25.9rem; height: 14rem">
               <div class="card-body">
-                <h5 class="card-title">Valorant</h5>
+                <h5 class="card-title">Fifa Online4</h5>
                 <p class="card-text">เติมเกม</p>
                 <p class="card-text">ราคา</p>
                 <router-link to="/product_detail5" class="btn btn-primary mx-2">รายละเอียด</router-Link>
@@ -77,10 +78,10 @@
     
           <div class="col-4">
             <!-- เนื้อหาของคอลัมน์ที่ 3 -->
-            <div class="card" style="width: 24rem;">
-              <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1696513856" class="card-img-top mx-auto" alt="" style="width: 23.9rem; height: 14rem">
+            <div class="card" style="width: 26rem;">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1696513856" class="card-img-top mx-auto" alt="" style="width: 25.9rem; height: 14rem">
               <div class="card-body">
-                <h5 class="card-title">Valorant</h5>
+                <h5 class="card-title">CSGO2</h5>
                 <p class="card-text">เติมเกม</p>
                 <p class="card-text">ราคา</p>
                 <router-link to="/product_detail6" class="btn btn-primary mx-2">รายละเอียด</router-Link>
@@ -90,13 +91,19 @@
           </div>
         </div>
       </div>
+    </div>
   </template>
   
   <script setup>
+  
   import { computed } from 'vue'
   import { useProductStore } from '../store/product';
   const product_store = useProductStore
   const list = computed(() => product_store.list_products)
+  const addToCart = (productId) => {
+  // ทำสิ่งที่คุณต้องการเมื่อคลิกที่ปุ่ม "เพิ่มลงตะกร้า" ในตัวอย่างนี้จะเรียกใช้ฟังก์ชัน addToCart(productId)
+  console.log(`เพิ่มสินค้าลงในตะกร้า: ${productId}`);
+};
   </script>
   
   <style lang="scss" scoped>
@@ -106,5 +113,6 @@
     .col-4 {
       margin-bottom: 2rem; /* เพิ่มระยะห่างด้านล่างของคอลัมน์ */
     }
+    
   </style>
   

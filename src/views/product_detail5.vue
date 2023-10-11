@@ -5,8 +5,8 @@
           <img src="https://cdn-webth.garenanow.com/webth/cdn/fo4/reskin/share.jpg" alt="Valorant" class="img-fluid">
         </div>
         <div class="col-md-6">
-          <h1 class="display-4">Valorant</h1>
-          <p class="lead">VALORANT: เกมยิงปืนในรูปแบบ 5v5 ที่ขับเคลื่อนโดยเหล่าเอเจนท์ผู้มากฝีมือและเป็นเกม FPS ที่เน้นการยิงที่แม่นยำพร้อมกับใช้ความสามารถอันเป็นเอกลักษณ์ของตัวละคร</p>
+          <h1 class="display-4">FC Online4</h1>
+          <p class="lead">EA Sports FC Online เป็นเกมฟุตบอลออนไลน์ที่มีผู้เล่นหลายคนจำนวนมากเล่นฟรี พัฒนาโดย EA Spearhead และเผยแพร่โดย Nexon, Garena และ Tencent</p>
           <h4 class="mt-4">เลือกราคา</h4>
           <select class="form-select">
             <option value="50">50 บาท</option>
