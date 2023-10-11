@@ -7,19 +7,7 @@
         <div class="col-md-6">
           <h1 class="display-4">Valorant</h1>
           <p class="lead">VALORANT: เกมยิงปืนในรูปแบบ 5v5 ที่ขับเคลื่อนโดยเหล่าเอเจนท์ผู้มากฝีมือและเป็นเกม FPS ที่เน้นการยิงที่แม่นยำพร้อมกับใช้ความสามารถอันเป็นเอกลักษณ์ของตัวละคร</p>
-          <h4 class="mt-4">เลือกราคา</h4>
-          <select class="form-select">
-            <option value="50">50 บาท</option>
-            <option value="100">100 บาท</option>
-            <option value="150">150 บาท</option>
-            <option value="300">300 บาท</option>
-            <option value="550">550 บาท</option>
-            <option value="1200">1200 บาท</option>
-            <option value="2000">2000 บาท</option>
-          </select>
-          <div class="mt-4">
-            <button class="btn btn-primary">เพิ่มลงตะกร้า</button>
-          </div>
+          <router-link to="/" class="btn btn-primary">กลับหน้าเเรก</router-link>
         </div>
       </div>
     </div>

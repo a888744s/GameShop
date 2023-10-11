@@ -1,0 +1,151 @@
+<template>
+    <div>
+      <div class="H1">เติมเกม เเละ ชำระเงิน</div>
+      <div class="product">
+        <img src="https://cdn.oneesports.co.th/cdn-data/sites/3/2021/08/ROV.png" class="card-img-top mx-auto" alt="" style="width: 35rem; height: 19rem">
+        <h2>Rov</h2>
+        <div class="instruction">
+          <p>เลือกราคาที่ต้องการเติม :</p>
+          <select class="form-select" v-model="selectedPrice">
+            <option value="50">70 บาท</option>
+            <option value="100">120 บาท</option>
+            <option value="150">180 บาท</option>
+            <option value="300">320 บาท</option>
+            <option value="550">550 บาท</option>
+            <option value="1200">1250 บาท</option>
+            <option value="2000">2200 บาท</option>
+          </select>
+          <div class="instruction">
+            <p>เลือกวิธีชำระ :</p>
+            <select class="form-select payment-method-select" v-model="selectedPaymentMethod">
+              <option value="ATM">บัตร ATM</option>
+              <option value="Mastercard">Mastercard</option>
+              <option value="Truemoney Wallet">TrueMoney Wallet</option>
+              <option value="TrueMoney Card">บัตรทรูมันนี่</option>
+            </select>
+          </div>
+          <div class="selecM">
+            <div v-if="selectedPaymentMethod === 'ATM'">
+              <input type="text" v-model="atmCardNumber" placeholder="หมายเลขบัตร ATM" />
+            </div>
+            <div v-if="selectedPaymentMethod === 'Mastercard'">
+              <input type="text" v-model="mastercardNumber" placeholder="หมายเลข Mastercard" />
+            </div>
+            <div v-if="selectedPaymentMethod === 'Truemoney Wallet'">
+              <input type="text" v-model="truemoneyWalletNumber" placeholder="หมายเลข TrueMoney Wallet" />
+            </div>
+            <div v-if="selectedPaymentMethod === 'TrueMoney Card'">
+              <input type="text" v-model="truemoneyCardNumber" placeholder="หมายเลขบัตรทรูมันนี่" />
+            </div>
+          </div>
+          <div class="b1">
+            <input type="text" v-model="email" placeholder="อีเมล" />
+            <input type="text" v-model="phoneNumber" placeholder="หมายเลขโทรศัพท์" />
+            <button @click="addToCart" class="btn btn-primary">ยืนยัน</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  
+  
+  <script>
+  export default {
+    data() {
+      return {
+        selectedPrice: '50',
+        selectedPaymentMethod: 'ATM',
+        atmCardNumber: '',
+        mastercardNumber: '',
+        truemoneyWalletNumber: '',
+        truemoneyCardNumber: '',
+      };
+    },
+    methods: {
+      addToCart() {
+        // ทำการเพิ่มสินค้าลงในตะกร้าที่นี่
+        // สามารถเข้าถึงค่าที่ผู้ใช้เลือกได้ผ่านตัวแปร this.selectedPrice และ this.selectedPaymentMethod
+      },
+    },
+  };
+  </script>
+  
+  
+  <style scoped>
+  .instruction {
+    font-size: 17.5px;
+    text-align: left;
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+  }
+  
+  /* คำสั่ง CSS เพิ่มเติมให้ข้อความชิดซ้าย */
+  .instruction p {
+    text-align: left;
+  }
+  
+  /* คำสั่ง CSS เพิ่มเติมให้ข้อความชิดซ้าย */
+  
+  /* คำสั่ง CSS เพิ่มระยะห่างด้านบนให้เลือกวิธีชำระ */
+  .payment-method-select {
+    margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+  }
+  
+  .selecM {
+    margin-top: 10px; /* เพิ่มระยะห่างด้านบน */
+  }
+  
+  .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px; /* ปรับขนาดขอบของส่วน product */
+    border: 2px solid #ccc; /* ปรับขนาดขอบของส่วน product */
+    text-align: center; /* จัดตำแหน่งข้อความตรงกลาง */
+  }
+  
+  .product img {
+    max-width: 100%;
+  }
+  
+  .product button {
+    margin-top: 10px;
+  }
+  
+  /* สไตล์ของปุ่ม "Add to Cart" */
+  .product button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+  }
+  
+  .product button:hover {
+    background-color: #0056b3;
+  }
+  
+  .H1 {
+    font-size: 38px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px; /* เพิ่มการกำหนดขนาดขอบด้วยการเพิ่ม Padding */
+  }
+  
+  .b1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* เพิ่มระยะห่างระหว่างช่องว่างและปุ่ม */
+  .b1 input {
+    margin: 5px 0;
+  }
+  </style>
+  
+  
+  
+  
+  
+  

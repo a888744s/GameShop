@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">GameJaa</a>
+      <a class="navbar-brand" href="#">GameJaaa</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -11,17 +11,65 @@
             <router-link to="/" class="nav-link" aria-current="page">หน้าแรก</router-link>
           </li>
           <li class="nav-item">
-            <!-- เปลี่ยนลิงก์ "ตะกร้าสินค้า" เพื่อใช้ to เพื่อกำหนดเส้นทางไปยังหน้า AddToCart.vue -->
-            <router-link to="/AddToCart" class="nav-link">ตะกร้าสินค้า</router-link>
+            <router-link to="/Member" class="nav-link">สมาชิกกลุ่ม</router-link>
           </li>
         </ul>
-        <div class="d-flex mb-2" role="search">
-          <input class="form-control me-2" type="search" placeholder="ค้นหา..." aria-label="Search">
-          <router-link to="/login" class="btn btn-outline-primary">Login</router-link>
-          <!-- เพิ่มปุ่ม Register -->
-          <router-link to="/register" class="btn btn-outline-success">Register</router-link>
+        <div class="SRC" role="search">
+          <input class="form-control me-2" type="search" placeholder="ค้นหา..." aria-label="Search" ref="searchInput">
+          <button @click="search" class="btn btn-outline-primary">ยืนยัน</button>
         </div>
+        <router-link to="/login" class="btn btn-outline-primary me-2">Login</router-link>
+        <router-link to="/register" class="btn btn-outline-success">Register</router-link>
       </div>
     </div>
   </nav>
 </template>
+
+<script>
+export default {
+  methods: {
+    search() {
+      const searchQuery = this.$refs.searchInput.value.trim().toLowerCase();
+
+      // รายการคำค้นหาและเป้าหมายหน้าที่เกี่ยวข้อง
+      const searchOptions = {
+        valorant: '/AddToCart',
+        rov: '/AddToCart2',
+        'tales runner': '/AddToCart3',
+        pubg: '/AddToCart4',
+        'fifa online4': '/AddToCart5',
+        csgo2: '/AddToCart6',
+      };
+
+      // ตรวจสอบว่าคำค้นหาอยู่ในรายการหรือไม่
+      if (searchQuery in searchOptions) {
+        // พาไปยังหน้าที่เกี่ยวข้อง
+        this.$router.push(searchOptions[searchQuery]);
+      }
+    },
+  },
+};
+</script>
+
+
+
+<style scoped>
+.SRC {
+  margin-right: 660px;
+  text-align: center;
+  margin-top: 10px; /* เพิ่มระยะห่างด้านบน */
+}
+
+/* สไตล์ของปุ่มค้นหา */
+.SRC button {
+  margin-top: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+}
+
+.SRC button:hover {
+  background-color: #0056b3;
+}
+</style>

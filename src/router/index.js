@@ -10,6 +10,12 @@ import product_detail6 from '../views/product_detail6.vue'
 import login from '../views/login.vue'
 import register from '../views/register.vue'
 import AddToCart from '../views/AddToCart.vue'
+import AddToCart2 from '../views/AddToCart2.vue'
+import AddToCart3 from '../views/AddToCart3.vue'
+import AddToCart4 from '../views/AddToCart4.vue'
+import AddToCart5 from '../views/AddToCart5.vue'
+import AddToCart6 from '../views/AddToCart6.vue'
+import Member from '../views/Member.vue'
 
 const routes = [
   {
@@ -18,6 +24,7 @@ const routes = [
     component: home_products
   },
 
+  
   {
     path: '/product_detail',
     name: 'product_detail',
@@ -71,6 +78,44 @@ const routes = [
     name: 'AddToCart',
     component: AddToCart
   },
+
+  {
+    path: '/AddToCart2',
+    name: 'AddToCart2',
+    component: AddToCart2
+  },
+
+  {
+    path: '/AddToCart3',
+    name: 'AddToCart3',
+    component: AddToCart3
+  },
+
+  {
+    path: '/AddToCart4',
+    name: 'AddToCart4',
+    component: AddToCart4
+  },
+
+  {
+    path: '/AddToCart5',
+    name: 'AddToCart5',
+    component: AddToCart5
+  },
+
+  {
+    path: '/AddToCart6',
+    name: 'AddToCart6',
+    component: AddToCart6
+  },
+
+  {
+    path: '/Member',
+    name: 'Member',
+    component: Member
+  },
+  
+
 ]
 
 const router = createRouter({
