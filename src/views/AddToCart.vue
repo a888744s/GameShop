@@ -3,7 +3,7 @@
     <h1>Add to Cart</h1>
     <!-- เพิ่มตัวอย่างสินค้าและปุ่มเพิ่มลงตระกร้า -->
     <div class="product">
-      <img src="product-image.jpg" alt="Product Image" />
+      <img src="https://sls-prod.api-onscene.com/partner_files/trueidintrend/187654/valorant-open-beta%20(1).png" class="card-img-top mx-auto" alt="" style="width: 25.9rem; height: 14rem">
       <h2>Product Name</h2>
       <p>Product Description</p>
       <p>Price:......</p>
