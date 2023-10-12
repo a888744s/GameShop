@@ -55,7 +55,8 @@
         </div>
       </div>
       <div class="confirmation" v-if="showConfirmation">
-        <p>การทำรายการสำเร็จ!</p><img src="src/assets/Check.jpg">
+        <p>การทำรายการสำเร็จ!</p>
+        <img src="src/assets/Check.jpg">
     </div>
     </div>
   </div>
@@ -65,11 +66,6 @@
 export default {
   data() {
   return {
-    build: {
-    rollupOptions: {
-    external: ['src/assets/Check.jpg'],
-    },
-  },
     selectedPrice: '50',
     selectedPaymentMethod: 'ATM',
     atmCardNumber: '',

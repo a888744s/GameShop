@@ -65,11 +65,6 @@
 export default {
   data() {
   return {
-    build: {
-    rollupOptions: {
-    external: ['src/assets/Check.jpg'],
-    },
-  },
     selectedPrice: '50',
     selectedPaymentMethod: 'ATM',
     atmCardNumber: '',
