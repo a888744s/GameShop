@@ -63,13 +63,18 @@ export default {
 /* สไตล์ของปุ่มค้นหา */
 .SRC button {
   margin-top: 10px;
-  background-color: #007BFF;
+  background-color: #7a7a7a;
   color: #fff;
   border: none;
   padding: 5px 10px;
 }
 
 .SRC button:hover {
-  background-color: #0056b3;
+  background-color: #cfcfcf;
+}
+
+.navbar-brand {
+  font-size: 24px; /* ปรับขนาดตัวอักษรตามที่คุณต้องการ */
+  font-weight: bold; /* เพิ่มความหนาตัวอักษร (ถ้าต้องการ) */
 }
 </style>

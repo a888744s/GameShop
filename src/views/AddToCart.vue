@@ -1,9 +1,17 @@
 <template>
   <div>
-    <div class="H1">เติมเกม เเละ ชำระเงิน</div>
+    <div class="H1">เติมเกม และ ชำระเงิน</div>
     <div class="product">
-      <img src="https://sls-prod.api-onscene.com/partner_files/trueidintrend/187654/valorant-open-beta%20(1).png" class="card-img-top mx-auto" alt="" style="width: 35rem; height: 19rem">
+      <img
+        src="https://sls-prod.api-onscene.com/partner_files/trueidintrend/187654/valorant-open-beta%20(1).png"
+        class="card-img-top mx-auto"
+        alt=""
+        style="width: 35rem; height: 19rem"
+      />
       <h2>Valorant</h2>
+      <div>
+        <input type="text" v-model="gameUID" placeholder="ชื่อในเกมพร้อม#" />
+      </div>
       <div class="instruction">
         <p>เลือกราคาที่ต้องการเติม :</p>
         <select class="form-select" v-model="selectedPrice">
@@ -18,6 +26,7 @@
         <div class="instruction">
           <p>เลือกวิธีชำระ :</p>
           <select class="form-select payment-method-select" v-model="selectedPaymentMethod">
+            <option value="QRcode">รหัส QR</option>
             <option value="ATM">บัตร ATM</option>
             <option value="Mastercard">Mastercard</option>
             <option value="Truemoney Wallet">TrueMoney Wallet</option>
@@ -25,6 +34,9 @@
           </select>
         </div>
         <div class="selecM">
+          <div v-if="selectedPaymentMethod === 'QRcode'">
+            <img :src="getQRCodePath(selectedPrice)" alt="รหัส QR" style="max-width: 100%" />
+          </div>
           <div v-if="selectedPaymentMethod === 'ATM'">
             <input type="text" v-model="atmCardNumber" placeholder="หมายเลขบัตร ATM" />
           </div>
@@ -44,16 +56,16 @@
           <button @click="addToCart" class="btn btn-primary">ยืนยัน</button>
         </div>
       </div>
+      <div class="confirmation" v-if="showConfirmation">
+        <p>การทำรายการสำเร็จ!</p>
+        <img src="src/assets/Check.jpg" class="checkmark" />
+      </div>
     </div>
   </div>
 </template>
 
-
-
 <script>
 export default {
-
-
   data() {
     return {
       selectedPrice: '50',
@@ -62,39 +74,48 @@ export default {
       mastercardNumber: '',
       truemoneyWalletNumber: '',
       truemoneyCardNumber: '',
+      gameUID: '',
+      email: '',
+      phoneNumber: '',
+      showConfirmation: false,
     };
   },
   methods: {
     addToCart() {
-      // ทำการเพิ่มสินค้าลงในตะกร้าที่นี่
-      // สามารถเข้าถึงค่าที่ผู้ใช้เลือกได้ผ่านตัวแปร this.selectedPrice และ this.selectedPaymentMethod
+      this.showConfirmation = true;
+      setTimeout(() => {
+        this.showConfirmation = false;
+      }, 3000);
+    },
+    getQRCodePath(price) {
+      return `src/assets/QRCODE.png`;
     },
   },
 };
 </script>
 
-
 <style scoped>
+.confirmation {
+  font-size: 25px;
+  text-align: center;
+}
+
 .instruction {
   font-size: 17.5px;
   text-align: left;
-  margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+  margin-top: 20px;
 }
 
-/* คำสั่ง CSS เพิ่มเติมให้ข้อความชิดซ้าย */
 .instruction p {
   text-align: left;
 }
 
-/* คำสั่ง CSS เพิ่มเติมให้ข้อความชิดซ้าย */
-
-/* คำสั่ง CSS เพิ่มระยะห่างด้านบนให้เลือกวิธีชำระ */
 .payment-method-select {
-  margin-top: 20px; /* เพิ่มระยะห่างด้านบน */
+  margin-top: 20px;
 }
 
 .selecM {
-  margin-top: 10px; /* เพิ่มระยะห่างด้านบน */
+  margin-top: 10px;
 }
 
 .product {
@@ -102,9 +123,9 @@ export default {
   flex-direction: column;
   align-items: center;
   margin: 20px;
-  padding: 20px; /* ปรับขนาดขอบของส่วน product */
-  border: 2px solid #ccc; /* ปรับขนาดขอบของส่วน product */
-  text-align: center; /* จัดตำแหน่งข้อความตรงกลาง */
+  padding: 20px;
+  border: 2px solid #ccc;
+  text-align: center;
 }
 
 .product img {
@@ -115,7 +136,6 @@ export default {
   margin-top: 10px;
 }
 
-/* สไตล์ของปุ่ม "Add to Cart" */
 .product button {
   background-color: #007BFF;
   color: #fff;
@@ -131,7 +151,7 @@ export default {
   font-size: 38px;
   color: rgb(0, 0, 0);
   text-align: center;
-  padding: 10px; /* เพิ่มการกำหนดขนาดขอบด้วยการเพิ่ม Padding */
+  padding: 10px;
 }
 
 .b1 {
@@ -140,13 +160,12 @@ export default {
   align-items: center;
 }
 
-/* เพิ่มระยะห่างระหว่างช่องว่างและปุ่ม */
 .b1 input {
   margin: 5px 0;
 }
+
+.checkmark {
+  max-width: 50px;
+  margin-top: 10px;
+}
 </style>
-
-
-
-
-

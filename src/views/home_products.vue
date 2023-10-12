@@ -25,7 +25,7 @@
             <div class="card-body">
               <h5 class="card-title">ROV</h5>
               <p class="card-text">เติมเกม</p>
-              <p class="card-text">ราคา : ตั้งเเต่ 55-2400 บาท</p>
+              <p class="card-text">ราคา : ตั้งเเต่ 50-2300 บาท</p>
               <router-link to="/product_detail2" class="btn btn-primary mx-2">รายละเอียด</router-Link>
                 <router-link to="/AddToCart2"> <!-- เปลี่ยนเส้นทาง "/AddToCart" ตามค่าที่คุณกำหนด -->
                   <button class="btn btn-success">สั่งซื้อสินค้า</button>
@@ -41,7 +41,7 @@
             <div class="card-body">
               <h5 class="card-title">Tales Runner</h5>
               <p class="card-text">เติมเกม</p>
-              <p class="card-text">ราคา : ตั้งเเต่ 50-2000 บาท</p>
+              <p class="card-text">ราคา : ตั้งเเต่ 50-1250 บาท</p>
               <router-link to="/product_detail3" class="btn btn-primary mx-2">รายละเอียด</router-Link>
                 <router-link to="/AddToCart3"> <!-- เปลี่ยนเส้นทาง "/AddToCart" ตามค่าที่คุณกำหนด -->
                   <button class="btn btn-success">สั่งซื้อสินค้า</button>
@@ -61,7 +61,7 @@
               <div class="card-body">
                 <h5 class="card-title">PUBG</h5>
                 <p class="card-text">เติมเกม</p>
-                <p class="card-text">ราคา : ตั้งเเต่ 90-2600 บาท</p>
+                <p class="card-text">ราคา : ตั้งเเต่ 95-2100 บาท</p>
                 <router-link to="/product_detail4" class="btn btn-primary mx-2">รายละเอียด</router-Link>
                   <router-link to="/AddToCart4"> <!-- เปลี่ยนเส้นทาง "/AddToCart" ตามค่าที่คุณกำหนด -->
                     <button class="btn btn-success">สั่งซื้อสินค้า</button>
@@ -77,7 +77,7 @@
               <div class="card-body">
                 <h5 class="card-title">Fifa Online4</h5>
                 <p class="card-text">เติมเกม</p>
-                <p class="card-text">ราคา : ตั้งเเต่ 50-2000 บาท</p>
+                <p class="card-text">ราคา : ตั้งเเต่ 50-2500 บาท</p>
                 <router-link to="/product_detail5" class="btn btn-primary mx-2">รายละเอียด</router-Link>
                   <router-link to="/AddToCart5"> <!-- เปลี่ยนเส้นทาง "/AddToCart" ตามค่าที่คุณกำหนด -->
                     <button class="btn btn-success">สั่งซื้อสินค้า</button>
@@ -93,7 +93,7 @@
               <div class="card-body">
                 <h5 class="card-title">CSGO2</h5>
                 <p class="card-text">เติมเกม</p>
-                <p class="card-text">ราคา : ตั้งเเต่ 80-2200 บาท</p>
+                <p class="card-text">ราคา : ตั้งเเต่ 80-3400 บาท</p>
                 <router-link to="/product_detail6" class="btn btn-primary mx-2">รายละเอียด</router-Link>
                   <router-link to="/AddToCart6"> <!-- เปลี่ยนเส้นทาง "/AddToCart" ตามค่าที่คุณกำหนด -->
                     <button class="btn btn-success">สั่งซื้อสินค้า</button>
@@ -104,39 +104,55 @@
         </div>
       </div>
     </div>
-  </template>
+</template>
   
-  <script setup>
-  
+<script setup>
 import { computed } from 'vue';
 import { useProductStore } from '../store/product';
-import { useRouter } from 'vue-router'; // นำเข้า Vue Router
+import { useRouter } from 'vue-router';
 const product_store = useProductStore;
 const list = computed(() => product_store.list_products);
-const router = useRouter(); // สร้างอินสแตนซ์ของเราเตอร์
+const router = useRouter();
 
-const addToCart = (productId) => {
-  // คุณสามารถดำเนินการบางอย่างที่นี่ก่อนนำทางไปยัง AddToCart.vue
-  console.log(`เพิ่มสินค้าลงในตะกร้า: ${productId}`);
-
-  // ใช้เราเตอร์เพื่อนำทางไปยังเส้นทาง "AddToCart"
-  router.push('/AddToCart'); // เปลี่ยนเส้นทางนี้ให้ตรงกับเส้นทางจริงในการกำหนดค่าของคุณ
+const viewProductDetail = (productId) => {
+  router.push('/product_detail/' + productId);
 };
 
+</script>
 
+<style lang="scss" scoped>
 
-
-  </script>
+.card-img-top:hover {
+  transform: scale(1.05); /* ทำให้รูปภาพขยายขนาดเล็กน้อยเมื่อชี้ที่รูปภาพ */
+  transition: transform 0.3s ease-in-out; /* ให้อนิเมชันขยายขนาดเมื่อชี้ที่รูปภาพมีความนุ่มโค้ง */
+  cursor: pointer; /* เปลี่ยนเคอร์เซอร์ให้เป็นรูปของมือเมื่อชี้ที่รูปภาพ */
+}
   
-  <style lang="scss" scoped>
+.product-image {
+  width: 100%;
+  object-fit: cover;
+}
 
-  
-    .row {
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+.row {
       margin-top: 10px; /* เพิ่มระยะห่างด้านบนของแถว */
-    }
-    .col-4 {
+}
+.col-4 {
       margin-bottom: 2rem; /* เพิ่มระยะห่างด้านล่างของคอลัมน์ */
-    }
+}
+.btn-success  {
+  background-color: #008f21;
+  color: #ffffff;
+}
     
-  </style>
+</style>
   
