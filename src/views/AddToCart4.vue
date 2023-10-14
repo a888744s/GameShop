@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="confirmation" v-if="showConfirmation">
-        <p>การทำรายการสำเร็จ!</p><img src="src/assets/Check.jpg">
+        <p>การทำรายการสำเร็จ!</p>
     </div>
     </div>
   </div>
