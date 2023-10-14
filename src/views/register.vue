@@ -115,12 +115,65 @@ export default {
 }
 
 .custom-checkbox:checked {
-  background-color: #28a745; /* สีพื้นหลังเมื่อ checkbox ถูกเลือก */
+  background-color: #ffffff; /* สีพื้นหลังเมื่อ checkbox ถูกเลือก */
 }
 
 /* สีขอบ checkbox เมื่อ hover */
 .custom-checkbox:hover {
   border-color: #1e7e34; /* สีขอบ checkbox เมื่อ hover */
 }
+@media only screen and (max-device-width:844px){
+  .card {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.card-header {
+  font-size: 24px;
+  background-color: #222222; /* สีพื้นหลังสำหรับส่วนหัวของการ์ด */
+  color: white; /* สีตัวอักษรของส่วนหัวของการ์ด */
+  text-align: center;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.custom-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #28a745; /* สีขอบ checkbox */
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+}
+
+.custom-checkbox:checked::before {
+  content: "✔"; /* สัญลักษณ์เมื่อ checkbox ถูกเลือก */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #28a745; /* สีของเครื่องหมายถูกเลือก */
+}
+
+.custom-checkbox:checked {
+  background-color: #ffffff; /* สีพื้นหลังเมื่อ checkbox ถูกเลือก */
+}
+
+/* สีขอบ checkbox เมื่อ hover */
+.custom-checkbox:hover {
+  border-color: #1e7e34; /* สีขอบ checkbox เมื่อ hover */
+}
+}
 </style>

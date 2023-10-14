@@ -6,7 +6,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 input-group">
           <li class="nav-item">
             <router-link to="/" class="nav-link" aria-current="page">หน้าแรก</router-link>
           </li>
@@ -14,12 +14,14 @@
             <router-link to="/Member" class="nav-link">สมาชิกกลุ่ม</router-link>
           </li>
         </ul>
-        <div class="SRC" role="search">
-          <input class="form-control me-2" type="search" placeholder="ค้นหา..." aria-label="Search" ref="searchInput">
+        <div class="SRC input-group" role="search">
+          <input class="form-control me-2" type="search" placeholder="ค้นหา..." aria-label="Search" ref="searchInput" >
           <button @click="search" class="btn btn-outline-primary">ยืนยัน</button>
         </div>
+        <div class="logandregis input-group">
         <router-link to="/login" class="btn btn-outline-primary me-2">Login</router-link>
         <router-link to="/register" class="btn btn-outline-success">Register</router-link>
+        </div>
       </div>
     </div>
   </nav>
@@ -74,7 +76,44 @@ export default {
 }
 
 .navbar-brand {
+  width: 8%;
+  margin-left: 10px;
   font-size: 24px; /* ปรับขนาดตัวอักษรตามที่คุณต้องการ */
   font-weight: bold; /* เพิ่มความหนาตัวอักษร (ถ้าต้องการ) */
 }
+@media only screen and (max-device-width:844px){
+  .SRC {
+  margin-right: 10px;
+  text-align: center;
+  margin-top: 5px; /* เพิ่มระยะห่างด้านบน */
+}
+
+/* สไตล์ของปุ่มค้นหา */
+.SRC button {
+  margin-top: 10px;
+  background-color: #7a7a7a;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+}
+
+.SRC button:hover {
+  background-color: #cfcfcf;
+}
+
+.navbar{
+  width: 100%;
+}
+.navbar-brand {
+  margin-left: 5px;
+  width: 25%;
+  font-size: 20px; /* ปรับขนาดตัวอักษรตามที่คุณต้องการ */
+  font-weight: bold; /* เพิ่มความหนาตัวอักษร (ถ้าต้องการ) */
+}
+.logandregis{
+  margin-top: 5%;
+}
+}
+
+
 </style>

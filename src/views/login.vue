@@ -31,6 +31,7 @@ export default {
       username: "",
       password: "",
       error: null, // เพิ่มคอมโพเนนต์ error เพื่อแสดงข้อความผิดพลาด
+      
     };
   },
   computed: {
@@ -86,5 +87,37 @@ export default {
 /* ปรับแต่งสีพื้นหลังสำหรับข้อความผิดพลาด */
 .text-danger {
   color: red;
+}
+@media only screen and (max-device-width:844px){
+  .card {
+    width: 100%;
+    border-radius: 15px;
+    margin-top: 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-header {
+    font-size: 24px;
+    background-color: #222222; /* สีพื้นหลังสำหรับส่วนหัวของการ์ด */
+    color: white; /* สีตัวอักษรของส่วนหัวของการ์ด */
+    text-align: center;
+  }
+
+  .btn-primary {
+    background-color: #007BFF;
+    border-color: #007BFF;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+
+  /* เพิ่ม CSS เพิ่มเติมตามที่คุณต้องการ */
+
+  /* ปรับแต่งสีพื้นหลังสำหรับข้อความผิดพลาด */
+  .text-danger {
+    color: red;
+  }
 }
 </style>
