@@ -91,7 +91,7 @@ methods: {
   },
   getQRCodePath(price) {
     // ถ้าเรามีรูปภาพรหัส QR ในโฟลเดอร์ 'qrcodes'
-    return `src/assets/QRCODE.png`;
+    return `/QRCODE.png`;
   }
 }
 
